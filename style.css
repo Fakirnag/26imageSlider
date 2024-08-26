@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: white;
+}
+
+.container{
+    max-width: 1200px;
+    width: 95%;
+}
+
+.sliders-wrapper .image-list{
+    display: grid;
+    gap:10px;
+    font-size: 0;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns:repeat(10,1fr);
+}
+
+.sliders-wrapper .image-list::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* 
+.image-item{
+    width: 600px;
+    height: 600px;
+} */
+
+.sliders-wrapper .image-list .image-item{
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.container .slider-scrollbar{
+    height: 24px;
+    width: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    
+}
+
+.slider-scrollbar .scrollbar-track{
+    height: 2px;
+    width: 180%;
+    background:white;
+    position: relative;
+}
+.slider-scrollbar:hover .scrollbar-track{
+    height:4px ;
+
+}
+.slider-scrollbar .scrollbar-thumb{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #0000;
+    background-color: black;
+    border-radius: inherit;
+    cursor: grab;
+}
+ .slider-scrollbar .scrollbar-thumb:active{
+    cursor: grabbing;
+    height: 8px;
+    top:-2px;
+} 
+
+
+
+.slider-scrollar .scrollar-thumb::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: 10px;
+}
